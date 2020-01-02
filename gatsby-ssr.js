@@ -1,4 +1,4 @@
-import wrapWithProvider from './provider'
+import Provider from './provider'
 
-// eslint-disable-next-line import/prefer-default-export
-export const wrapRootElement = wrapWithProvider
+export const wrapRootElement = Provider
+

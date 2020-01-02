@@ -11,9 +11,9 @@ const SecondPage = () => (
       {context => (
         <React.Fragment>
           <SEO title="Page two" />
-          <h1>Hi from the second page</h1>
+          <h1>{context.isDark ? "Dark Theme" : "Light Theme"}</h1>
           <p>Welcome to page 2</p>
-          <button onClick={() => context.changeTheme()}>{context.state ? "Light" : "Dark"}</button>
+          <button onClick={() => context.changeTheme()}>{context.isDark ? "Light" : "Dark"}</button>
           <Link to="/">Go back to the homepage</Link>
         </React.Fragment>
       )}

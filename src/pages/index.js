@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import '../global.sass'
+// import '../global.sass'
 import { myContext } from '../../provider'
 
 const IndexPage = () => (
@@ -12,8 +12,8 @@ const IndexPage = () => (
       {context => (
         <React.Fragment>
           <SEO title="Home" />
-          <h1>{context.state ? "Dark Theme" : "Light Theme"}</h1>
-          <button onClick={() => context.changeTheme()}>{context.state ? "Light" : "Dark"}</button>
+          <h1>{context.isDark ? "Dark Theme" : "Light Theme"}</h1>
+          <button onClick={() => context.changeTheme()}>{context.isDark ? "Light" : "Dark"}</button>
           <Link to="/page-2/">Go to page 2</Link>
         </React.Fragment>
       )}
